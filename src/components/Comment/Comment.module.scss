@@ -1,0 +1,67 @@
+@import '../../assets/constants.scss';
+.comment{
+    background-color: $main-input-color;
+    border-radius: 16px;
+    .commentWrapper{
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    .avatarAndName{
+        display: flex;
+        margin-bottom: 5px;
+        .avatarWrapper{
+            flex:0 0 32px;
+            height: 32px;
+            margin-right: 15px;
+            img{
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+        .login{
+            font-family: $main-font;
+            color:$main-gray;
+            font-size: 18px;
+            cursor: pointer;
+            transition-duration: .3s;
+            &:hover{
+                color:white;
+                transition-duration: .3s;
+            }
+        }
+    }
+    .textWrapper{
+        display: flex;
+        position: relative;
+        flex-wrap: wrap;
+        .text{
+            flex:0 1 100%;
+            font-family: $main-font;
+            color:$second-gray;
+            font-size: 24px;
+            margin-bottom: 30px;
+            @media (max-width:614px) {
+                font-size: 17px;
+            }
+        }
+        img{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            transition-duration: .3s;
+            &:hover{
+                filter: invert(100%);
+                cursor: pointer;
+                transition-duration: .3s;
+            }
+        }
+    }
+    transition-duration: .3s;
+    &:hover{
+        transition-duration: .3s;
+        background-color:darken($main-gray, $amount: 20);
+        cursor: pointer;
+    }
+}

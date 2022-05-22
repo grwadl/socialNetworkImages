@@ -1,0 +1,17 @@
+@import '../../assets/constants.scss';
+.wrapper{
+    background-color:$main-toolbar;
+    width: 200px;
+    position: absolute;
+    top: 70px;
+    border-radius: 16px;
+    right:10px;
+    button{
+        width: 170px;
+        height: 40px;
+        margin: 30px auto 30px auto;
+        img{
+            display: none;
+        }
+    }
+}

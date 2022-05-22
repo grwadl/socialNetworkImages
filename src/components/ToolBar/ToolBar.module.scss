@@ -1,0 +1,158 @@
+@import '../../assets/constants.scss';
+
+.toolBar {
+    flex: 0 0 204px;
+    padding: 0 15px 0 24px;
+    background-color: $main-toolbar;
+    min-height: 100vh;
+    position: relative;
+    .logo {
+        padding-top: 24px;
+        padding-bottom: 34px;
+        width: 108px;
+        margin: 0 auto;
+        img {
+            width: 100%;
+        }
+    }
+
+    .linkWrapper {
+        display: flex;
+        padding: 16px 0;
+
+        &::before {
+            opacity: 0;
+        }
+
+        display: flex;
+        width: 100%;
+        font-family: $main-font;
+        color: $main-gray;
+        text-decoration: none;
+        font-size: 16px;
+        transition-duration: .3s;
+
+        img {
+            filter: invert(50%);
+            display: flex;
+            margin-right: 18px;
+            transition-duration: .3s;
+        }
+    }
+
+    .superWrapper:hover {
+        cursor: pointer;
+
+        img {
+            filter: invert(100%);
+            transition-duration: .3s;
+        }
+
+        color: white;
+        transition-duration: .3s;
+
+    }
+
+    a {
+        text-decoration: none;
+    }
+    .profileInfoToggled{
+        display: none;
+    }
+    .linkWrapper.activeLinkWrapper {
+        position: relative;
+
+        &::before {
+            opacity: 1;
+            content: '';
+            width: 64px;
+            height: 6px;
+            left: -25.5%;
+            bottom: 27px;
+            position: absolute;
+            transform: rotate(90deg);
+            background-color: #fff;
+            transition-duration: .3s;
+        }
+
+        img {
+            filter: invert(100%);
+            transition-duration: .3s;
+        }
+
+        color: #fff;
+        transition-duration: .3s;
+    }
+    .burgerMenu,.burgerMenu::after,.burgerMenu::before{
+        display: none;
+    }
+    @media (max-width:800px) {
+        transform: translate(-1000%);
+        display: none;
+        z-index: 3;
+        transition-duration: .3s;
+        overflow-y: scroll;
+        .profileInfoToggled
+        {
+            display: block;
+        }
+        &.active{
+            display: block;
+            transform: translate(0);
+            transition-duration: .3s;
+            position: fixed;
+            overflow: scroll;
+            top:0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            .logo{
+                margin: 15px auto;
+                width: 90px;
+            }
+        }
+        .linkWrapper{
+            width: 50%;
+            margin: 0 auto;
+            font-size: 20px;
+            margin-bottom: 30px;
+            &::before{
+                margin-left: -10px;
+            }
+        }
+        .burgerMenu{
+            display: block!important;
+            width: 33px;
+            height: 33px;
+            position: absolute;
+            top:20px;
+            right:20px;
+            cursor: pointer;
+        }
+        .burgerMenu::after{
+            display: block!important;
+            width: 25px;
+            height: 3px;
+            content: '';
+            position: absolute;
+            top:18px;
+            right:9px;
+            background-color: #fff;
+            rotate:(45deg);
+            cursor: pointer;
+        }
+        .burgerMenu::before{
+            display: block!important;
+            width: 25px;
+            height: 3px;
+            content: '';
+            position: absolute;
+            top:18px;
+            right:9px;
+            background-color: #fff;
+            rotate:(-45deg);
+            cursor: pointer;
+        }
+    }
+    
+}

@@ -1,0 +1,78 @@
+@import '../../assets/constants.scss';
+.profileInfo {
+    width: 50%;
+    margin: 0 auto;
+    .avatarNname {
+        display: flex;
+        align-items: center;
+        img{
+            width: 32px;
+            height: 32px;
+            margin-right: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .profileName {
+            position: relative;
+                font-family: $main-font;
+                color: $main-gray;
+                text-decoration: none;
+                transition-duration: .3s;
+                font-size: 18px;
+                &:hover {
+                    color: $second-gray;
+                    transition-duration: .3s;
+                }
+            
+            &::before{
+                position: absolute;
+                top:7px;
+                right:-35px;
+                content: '';
+                width: 3px;
+                height: 15px;
+                transform: rotate(45deg);
+                background-color: $second-gray;
+                transition-duration: .3s;
+            }
+            &::after{
+                position: absolute;
+                top:7px;
+                right:-25px;
+                content: '';
+                width: 3px;
+                height: 15px;
+                transform: rotate(-45deg);
+                background-color: $second-gray;
+                transition-duration: .3s;
+            }
+            &.openMenu{
+                &::before{
+                    transition-duration: .3s;
+                    transform: rotate(-45deg);
+                }
+                &::after{
+                    transition-duration: .3s;
+                    transform: rotate(45deg);
+                }
+            }
+        }
+    }
+
+}
+.addAvatar{
+    .padder{
+        padding-bottom: 20px;
+    }
+    
+    button{
+        width: 170px;
+        height: 40px;
+        margin: 3px auto 0 auto;
+        margin-left: -10px;
+        img{
+            display: none;
+        }
+        margin-bottom: 20px;
+    }
+}

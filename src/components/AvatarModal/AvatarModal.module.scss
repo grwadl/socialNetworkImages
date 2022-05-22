@@ -1,0 +1,140 @@
+@import '../../assets/constants.scss';
+
+.modal {
+    top: 150px;
+    background-color: $main-body-color;
+    border-radius: 16px;
+    height: 350px;
+    width: 30%;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+    box-shadow: 32px 32px 32px 32px rgba(0.16, 0.16, 0.16, 0.16);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+
+    .modalWrapper {
+        height: 70%;
+        width: 80%;
+
+        .setPost {
+            display: block;
+            width: 100%;
+            margin-top: 12px;
+            height: 56px;
+            background-color: $main-input-color;
+            border-radius: 8px 8px 0px 0px;
+            outline: none;
+            border: none;
+            font-family: $main-font;
+            font-size: 16px;
+            color: white;
+            padding-left: 15px;
+        }
+
+        input[type="file"] {
+            color: white;
+            border: 0;
+            outline: none;
+            margin-top: 40px;
+            font-size: 16px;
+            font-family: $main-font;
+            margin-bottom: 20px;
+            overflow-x: hidden;
+            max-width: 200px;
+        }
+
+        input[type="file"]::file-selector-button {
+            background-color: $main-blue;
+            border: 0;
+            padding: 15px;
+            border-radius: 8px;
+            color: white;
+            font-family: $main-font;
+            font-size: 16px;
+            margin-right: 10px;
+            cursor: pointer;
+            text-overflow: ellipsis;
+            white-space: pre;
+        }
+        .setPostLabel {
+            font-family: $main-font;
+            color: #fff;
+            font-size: 26px;
+            display: block;
+        }
+
+        button {
+            width: 70%;
+            padding-left: 15px;
+            padding-right: 17px;
+            margin: 50px auto 0 auto;
+        }
+    }
+
+    .closeButton {
+        display: none;
+        position: absolute;
+        top: 30px;
+        width: 25px;
+        height: 25px;
+        right: 40px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            background-color: #fff;
+            width: 21px;
+            height: 2px;
+            transform: rotate(45deg);
+            pointer-events: none;
+            top: 9px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            background-color: #fff;
+            width: 21px;
+            height: 2px;
+            transform: rotate(-45deg);
+            pointer-events: none;
+            top: 9px;
+        }
+    }
+
+    .closeButton,
+    .closeButton::after,
+    .closeButton::before {
+        cursor: pointer;
+    }
+    @media (max-width:918px) {
+        position: fixed;
+        overflow-y: scroll;
+        top:0;
+        border-radius: 0;
+        left: 0;
+        transform: translate(0);
+        width: 100%;
+        height: calc(100%);
+        padding: 0;
+        .closeButton{
+            right: 20px;
+        }
+    }
+}
+
+.active {
+    display: flex;
+
+    .closeButton {
+        display: block;
+
+        &::after,
+        &::before {
+            display: block;
+        }
+    }
+}

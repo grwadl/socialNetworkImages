@@ -1,0 +1,149 @@
+@import '../../assets/constants.scss';
+.authPage{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+.authPageWrapper {
+    background-color: $main-body-color;
+    max-width: 562px;
+    padding: 0 30px 0 0;
+    position: relative;
+    margin: 0 auto;
+    margin-right: -15px;
+    margin: 39px auto 0 auto;
+    .title{
+        font-size: 48px;
+        font-weight:bold;
+        color:#fff;
+        font-family: $main-font;
+        text-align: center;
+    }
+    .imgWrapper {
+        display: flex;
+        justify-content: center;
+        padding: 24px 0 48px 0;
+
+        img {
+            width: 164px;
+        }
+    }
+    .IMG{
+        display: flex;
+        justify-content: center;
+        padding-bottom: 10px;
+        @media (max-width:400px) {
+            img{
+                width: 104px;
+            }
+        }
+    }
+    .error{
+        font-family: $main-font;
+        color:$main-error;
+        font-size: 16px;
+        margin: 3px 0 0 3px;
+    }
+    form {
+        display: flex;
+        flex-wrap: wrap;
+
+        .showPasswordActive {
+            .imgWrapper {
+                &::after {
+                    opacity: 0!important;
+                    transition-duration: .3s;
+                    pointer-events: none;
+                }
+            }
+        }
+
+        .showPassword {
+            flex: 0 1 100%;
+            display: flex;
+            position: relative;
+            flex-wrap: wrap;
+            .imgWrapper {
+                position: absolute;
+                right: 10px;
+                top: 21px;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 3px;
+                    height: 30px;
+                    bottom: 49px;
+                    background-color: white;
+                    transform: rotate(-45deg);
+                    opacity: 1;
+                    transition-duration: .3s;
+                    pointer-events: none;
+                }
+            }
+
+            img {
+                filter: invert(100%);
+                width: 32px;
+                cursor: pointer;
+            }
+
+            input {
+                padding-right: 50px;
+            }
+        }
+
+        input,
+        .showPassword input {
+            display: block;
+            flex: 0 1 100%;
+            margin-top: 32px;
+            height: 56px;
+            background-color: $main-input-color;
+            border-radius: 8px 8px 0px 0px;
+            outline: none;
+            border: none;
+            font-family: $main-font;
+            font-size: 16px;
+            color: white;
+            padding-left: 15px;
+            &:focus {
+                border-bottom: 3px solid $main-blue;
+            }
+        }
+
+        button {
+            flex: 0 1 100%;
+            margin: 32px 0;
+        }
+    }
+    .linkWrapper{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        a{
+            font-family: $main-font;
+            color:#fff;
+            font-size:18px;
+            text-decoration: none;
+            padding-bottom: 40px;
+        }
+    }
+    .authErrorBlock{
+        font-family: $main-font;
+        color:$main-error;
+        width: 100%;
+        text-align: center;
+        margin: -10px 0 20px 0;
+        font-size: 20px;
+    }
+    @media (max-width:500px) {
+        .title{
+            font-size: 36px;
+        }
+        .Password{
+            
+        }
+        
+    }
+}

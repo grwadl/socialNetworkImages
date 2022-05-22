@@ -1,0 +1,33 @@
+@import '../../assets/constants.scss';
+.feedWrapper {
+    flex: 1 1 70vh;
+    padding: 0 58px;
+
+    .feedTitle {
+        font-family: $main-font;
+        font-size: 40px;
+        color: white;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+
+        @media (max-width:476px) {
+            font-size: 30px;
+        }
+
+        @media (max-width:356px) {
+            font-size: 20px;
+        }
+    }
+
+    @media (max-width:1000px) {
+        padding: 0;
+
+    }
+
+    .postList {
+        display: flex;
+        margin: 0 -16px;
+        flex-wrap: wrap;
+    }
+}

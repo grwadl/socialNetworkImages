@@ -1,0 +1,28 @@
+@import '../../../assets/constants.scss';
+.error{
+    font-family: $main-font;
+    color:$main-error;
+    font-size: 16px;
+    margin: 3px 0 0 3px;
+}
+.inputWrapperForm{
+    
+    flex: 0 1 100%;
+}
+.emailInput {
+            display: block;
+            margin-top: 32px;
+            width: calc(100% - 15px);
+            height: 56px;
+            background-color: $main-input-color;
+            border-radius: 8px 8px 0px 0px;
+            outline: none;
+            border: none;
+            font-family: $main-font;
+            font-size: 16px;
+            color: white;
+            padding-left: 15px;
+            &:focus {
+                border-bottom: 3px solid $main-blue;
+            }
+        }

@@ -1,0 +1,56 @@
+@import '../../assets/constants.scss';
+.faq{
+    padding: 102px 58px 0 58px;
+    max-width: 100%;
+    @media (max-width:1000px) {
+        padding:102px 0 0 0;
+    }
+    .faqMain{
+        max-width: 100%;
+        .faqMainTitle{
+            font-family: $main-font;
+            color:white;
+            font-size: 48px;
+            display: flex;
+            justify-content: center;
+            @media (max-width:636px) {
+                font-size: 32px;
+            }
+        }
+        .profileFAQtool{
+            margin: 10px 0;
+        }
+        .faqQuestionitem{
+            max-width: 100%;
+        }
+        .faqQuestions{
+            font-family: $main-font;
+            color:white;
+            .faqQuestion{
+                font-size: 32px;
+                padding: 20px 0;
+                font-size: 32px;
+                @media (max-width:636px) {
+                    font-size: 24px;
+                }
+            }
+            .imgWrapper{
+                max-width: 400px;
+                img{
+                    width: 100%;
+                    min-width: 0;
+                }
+            }
+            .faqAnswer{
+                font-size: 20px;
+                min-width: 0;
+                @media (max-width:636px) {
+                    font-size: 18px;
+                }
+            }
+        }
+        .faqLink{
+            color:white;
+        }
+    }
+}

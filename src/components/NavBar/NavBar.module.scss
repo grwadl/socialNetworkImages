@@ -1,0 +1,94 @@
+@import '../../assets/constants.scss';
+nav {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+    position: fixed;
+    top:0;
+    left:243px;
+    right:0;
+    z-index: 2;
+    background-color: $main-body-color;
+    .navWrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        padding: 20px 54px 16px 54px;
+
+        .title {
+                position: relative;
+                font-family: $main-font;
+                color: white;
+                font-size: 26px;
+                text-decoration: none;
+        }
+
+        .profileInfo {
+            .avatarNname {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                img{
+                    width: 32px;
+                    height: 32px;
+                    margin-right: 10px;
+                    margin-top: 3px;
+                    cursor: pointer;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+                .profileName {
+                        font-family: $main-font;
+                        color: $main-gray;
+                        text-decoration: none;
+                        transition-duration: .3s;
+                        flex: unset!important;
+                        &:hover {
+                            color: $second-gray;
+                            transition-duration: .3s;
+                        }
+                }
+                &::after{
+                    position: absolute;
+                    top:34px;
+                    right:34px;
+                    content: '';
+                    width: 3px;
+                    height: 10px;
+                    transform: rotate(45deg);
+                    background-color: $second-gray;
+                    transition-duration: .3s;
+                }
+                &::before{
+                    position: absolute;
+                    top:34px;
+                    right:39px;
+                    content: '';
+                    width: 3px;
+                    height: 10px;
+                    transform: rotate(-45deg);
+                    background-color: $second-gray;
+                    transition-duration: .3s;
+                }
+                &.openMenu{
+                    &::after{
+                        transition-duration: .3s;
+                        transform: rotate(-45deg);
+                    }
+                    &::before{
+                        transition-duration: .3s;
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+
+        }
+    }
+    @media (max-width:800px) {
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        .profileInfo{
+            display: none;
+        }
+    }
+}

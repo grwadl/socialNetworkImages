@@ -1,0 +1,11 @@
+.mainPageWrapper{
+    display: flex;
+    overflow-x: hidden;
+    .mainSection{
+    flex: 1 1 1236px;
+    padding: 0 15px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+    }
+}

@@ -1,0 +1,30 @@
+@import '../../assets/constants.scss';
+.page404{
+    width: 100%;
+    padding-top: 120px;
+    .wrapper404{
+        max-width: 600px;
+        display: flex;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        img{
+           flex:0 1 400px;
+           margin: 0 auto;
+        }
+    }
+    .text404{
+        font-family: $main-font;
+        flex:0 1 100%;
+        color:white;
+        font-size: 32px;
+        display: flex;
+        justify-content: center;
+    }
+    button{
+        width: 130px;
+        margin: 30px auto 0 auto;
+        img{
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,236 @@
+@import '../../assets/constants.scss';
+.scoreboardWrapper{
+    flex: 0 1 496   px;
+    .scoreBoardTitle{
+        font-family: $main-font;
+        font-size: 40px;
+        color:white;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        @media (max-width:476px) {
+            font-size: 30px;
+        }
+        @media (max-width:356px) {
+            font-size: 20px;
+        }
+    }
+}
+.scoreboard{
+    display: flex;
+    padding: 0 58px;
+    margin-bottom: 56px;
+    @media (max-width:1232px) {
+        flex: 0 1 436px;
+    }
+    @media (max-width:1000px) {
+        flex: 0 1 406px;
+        padding: 0;
+    }
+    @media(max-width:920px){
+        flex:0 1 350px;
+        button{
+            width: 80px!important;
+        }
+    }
+    @media (max-width:800px) {
+        padding: 0;
+    }
+    @media (max-width:992px) {
+        flex: 1 1 496px;
+        flex-wrap: wrap;
+        .likedPost,.popularUsers{
+            flex:0 1 100%!important;
+            .popularUsersTitle{
+                font-size: 18px!important;
+            }
+        }
+        .likedPost{
+
+            margin-right: 0!important;
+            margin-bottom: 30px;
+        }
+    }
+    .likedPost{
+        flex: 0 1 832px;
+        margin-right: 32px;
+        display: flex;
+        flex-wrap: wrap;
+        .likedPostImg{
+            max-width: 832px;
+            max-height: 336px;
+            display: flex;
+            flex:0 1 100%;
+            img{
+                width: 100%;
+                max-height: 336px;
+                border-radius: 16px 16px 0 0;
+                object-fit: cover;
+                min-height: 0;
+                min-width: 0;
+            }
+        }
+        .likedPostInfo{
+            flex:0 1 100%;
+            padding: 16px;
+            background-color: $main-input-color;
+            border-radius:0 0 16px 16px;
+            .postName{
+                font-family: $main-font;
+                color:white;
+                font-size: 18px;
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 8px;
+                position: relative;
+                button{
+                    position: absolute;
+                    right: 0;
+                    top: 34px;
+                    width: 125px;
+                    padding: 10px 15px;
+                    height: 50px;
+                    
+                }
+            }
+            .postUser{
+                display: flex;
+                align-items: center;
+                img{
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                }
+                .userLogin{
+                    font-family: $main-font;
+                    color:$main-gray;
+                    font-size: 14px;
+                    margin-left: 8px;
+                    transition-duration: .3s;
+                }
+                cursor: pointer;
+                &:hover{
+                    .userLogin{
+                    color:$second-gray;
+                    transition-duration: .3s;
+                    }
+                }
+            }
+            .addInfo{
+                .date{
+                    font-family: $main-font;
+                    color:$main-gray;
+                    margin: 8px 0;
+                    display: flex;
+                    align-content: center;
+                    font-size: 14px;
+                    img{
+                        margin-right: 4px;
+                    }
+                    
+                }
+                .views{
+                    font-family: $main-font;
+                    color:$main-gray;
+                    display: flex;
+                    align-content: center;
+                    font-size: 14px;
+                    img{
+                        margin-right: 4px;
+                        filter: invert(38%);
+                        
+                         padding-bottom: 12px;
+                    }
+                    }
+            }
+        }
+    }
+    .popularUsers{
+        background-color: $main-input-color;
+        border-radius: 16px;
+        max-height: 468px;
+        overflow-y: auto;
+        flex: 0 1 256px;
+        padding: 16px;
+        .popularUsersTitle{
+            font-family: $main-font;
+            color:white;
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            @media (max-width:974px) {
+                font-size: 14px; 
+          }
+        }
+        .topUser{
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            border-radius: 16px;
+            flex-wrap: wrap;
+            @media (max-width:1200px) {
+                margin: 10px 0;
+                img{
+                    width: 24px!important;
+                    height: 24px!important;
+                }
+            }
+            img{
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                margin-right: 16px;
+            }
+            .topUserName{
+                font-family: $main-font;
+            color:white;
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            transition-duration: .3s;
+            @media (max-width:1200px) {
+                font-size: 14px;
+            }
+            }
+            &:hover{
+                cursor: pointer;
+                .topUserName{
+                    color:$second-gray;
+                    transition-duration: .3s;
+                }
+            }
+            .userStat{
+                flex:0 1 100%;
+                .countLikes,.countPosts{
+                    display: flex;
+                    font-family: $main-font;
+                    color:$main-gray;
+                    font-size: 14px;
+                    img{
+                        width: 24px;
+                        display: flex;
+                        margin-top: -6px;
+                        margin-right: 8px!important;
+                        @media (max-width:1200px) {
+                            width: 18px!important;
+                            height: 18px!important;
+                            margin-top: 0;
+                        }
+                        
+                    }
+                } 
+                .countLikes{
+                    margin: 10px 0;
+                    @media (max-width:974px) {
+                          margin: 5px 0;  
+                    }
+                }
+                .countPosts{
+                    filter:invert(60%);
+                }
+            }
+              
+        }
+    }
+    
+}

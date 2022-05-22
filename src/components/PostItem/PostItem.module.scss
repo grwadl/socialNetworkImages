@@ -1,0 +1,110 @@
+@import '../../assets/constants.scss';
+.item{
+    flex:0 1 calc(25% - 32px);
+    background-color:$main-input-color;
+    border-radius: 16px;
+    margin: 0 16px 32px 16px;
+    min-width: 0;
+    max-height:304px;
+    transition-duration: .3s;
+    position: relative;
+    max-height: 300px;
+    padding-bottom: 16px;
+    .photo{
+        width: 100%;
+        height: 160px;
+       img{
+        width: 100%;
+        height: 100%;
+        border-radius: 16px 16px 0 0;
+        object-fit: cover;	
+        }
+    }
+    .info{
+        max-height: 160px;
+        padding: 0 10px;
+        position: relative;
+        .author{
+            color:$second-gray;
+            font-family: $main-font;
+            font-size: 14px;
+            margin-top: 16px;
+            transition-duration: .3s;
+            &:hover{
+                color:white;
+                transition-duration: .3s;
+            }
+        }
+        .name{
+            color:white;
+            font-family: $main-font;
+            font-size: 18px;
+            padding: 8px 0 14px 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow:ellipsis
+        }
+        .avatar{
+            position: absolute;
+            height: 48px;
+            width: 48px;
+            border-radius: 50%;
+            right:16px;
+            border: 2px solid white;
+            object-fit: cover;
+            top:-40px;
+        }
+    }
+    &:hover{
+        transition-duration: .3s;
+        background-color: lighten($main-body-color,10);
+        cursor: pointer;
+    }
+    .icons{
+        display: flex;
+        width: 100%;
+        max-width: 237px;
+        align-items: center;
+        padding-bottom: 9px;
+        justify-content: space-between;
+        transition-duration: .3s;
+        position: relative;
+        .likebtn,.commsCount{
+            img{
+                transition-duration: .3s;
+                &:hover{
+                    filter: invert(100%);
+                    transition-duration: .3s;
+                }
+            }   
+        }
+        
+        .likesText,.commsText{
+            margin-left: 5px;
+            font-family: $main-font;
+            color:white;
+            position: relative;
+            top:-6px;
+        }
+    }
+    @media (max-width:1333px) {
+        flex:0 1 calc(33.333333333333333333333333% - 32px);
+    }
+    @media (max-width:1028px) {
+        flex:0 1 calc(50% - 32px);
+    }
+    @media (max-width:400px) {
+        flex:0 1 calc(100%);
+    }
+    .time{
+        padding-left: 10px;
+        img{
+            width: 16px;
+            margin-right: 5px;
+            position: relative;
+            bottom: -3px;
+        }
+        font-family: $main-font;
+        color:$second-gray;
+    }
+}
