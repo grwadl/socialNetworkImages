@@ -1,2 +1,2 @@
 This is source code of our project. This is supposed to be social network, like Pinterest. I worked on Frontend-part of our app, and my teammate Alexandr worked at Backend.
-Unforunately, our API is unavaliable now, because it's hosted on Azure, and free-trial is over, so we have to pay to keep our API working
+Unforunately, our API is unavaliable now, because it's hosted on Azure, and free-trial is over, so we have to pay to keep our API working. Here's the source of backend https://github.com/oleksandrcherevkov/PhotoAppApi, and here's the source-code of Frontend https://github.com/grwadl/socialNetworkImages.
